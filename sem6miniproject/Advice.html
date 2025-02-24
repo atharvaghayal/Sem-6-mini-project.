@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetBot</title>
+    <link rel="stylesheet" href="advice.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="navbar">
+        <ul>
+            <li class="tab"><a href="index.html">Home</a></li>
+            <li class="tab"><a href="advice.html">AI-Advice</a></li>
+            <li class="tab"><a href="loan_calc.html">Loan Calculator</a></li>
+            <li class="tab"><a href="tax_calc.html">Tax Calculator</a></li>
+            <li class="tab"><a href="reports.html">Reports</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="container1">
+            <h1>AI Financial Advice</h1>
+            <form id="adviceForm">
+                <label>Annual Income (₹):</label>
+                <input type="number" id="annualIncome" required><br><br>
+
+                <label>Annual Expenses (₹):</label>
+                <input type="number" id="annualExpenses" required><br><br>
+
+                <label>Age:</label>
+                <input type="number" id="age" required><br><br>
+
+                <label>Investment Amount (₹):</label>
+                <input type="number" id="investment" required><br><br>
+
+                <label>Loan Amount (₹):</label>
+                <input type="number" id="loan" required><br><br>
+
+                <button type="submit">Get Advice</button>
+            </form>
+        </div>
+    </div>
+    <script src="advice.js"></script>  <!-- Moved to the correct place -->
+</body>
+</html>
