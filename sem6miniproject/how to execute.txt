@@ -1,0 +1,15 @@
+open app.py file page.
+run python app.py(graphs wala page done..)
+
+open advice.html page through live server.
+show advice,loan,tax,reports pages..(completely running condition)
+
+for investment analysis :
+Run Investment.py
+
+O-V-E-R-A-L-L :
+1. Run App.py.
+2. live server advice.html.
+3. Run Investment.py.
+
+SHOW TAX CALCULATOR 3 DECIMAL MISTAKE(EXPLAIN IT IN SERIOUS AS WELL AS FUNNY WAY)

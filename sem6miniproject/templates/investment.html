@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetBot</title>
+    <link rel="stylesheet" href="static\investment.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li class="tab"><a href="index.html">Home</a></li>
+            <li class="tab"><a href="advice.html">AI-Advice</a></li>
+            <li class="tab"><a href="index.html">Investment analysis Calculator</a></li>
+            <li class="tab"><a href="loan_calc.html">Loan Calculator</a></li>
+            <li class="tab"><a href="tax_calc.html">Tax Calculator</a></li>
+            <li class="tab"><a href="reports.html">Reports</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>Investment Analysis Calculator</h2>
+        <form action="/calculate" method="POST">
+            <label>Name:</label>
+            <input type="text" name="name" required>
+            
+            <label>Age:</label>
+            <input type="number" name="age" required>
+            
+            <label>Annual Amount Invested (₹):</label>
+            <input type="number" name="investment" required>
+            
+            <label>Rate of Interest (%):</label>
+            <input type="number" name="rate" step="0.1" required>
+            
+            <label>Period (years):</label>
+            <input type="number" name="period" required>
+            
+            <label>Type of Investment:</label>
+            <select name="investment_type">
+                <option value="Stocks">Stocks</option>
+                <option value="Mutual Funds">Mutual Funds</option>
+                <option value="FD">Fixed Deposit</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Gold">Gold</option>
+            </select>
+            
+            <button type="submit">Calculate</button>
+        </form>
+
+        {% if result %}
+        <div class="result-box">
+            <h3>Investment Results</h3>
+            <p><strong>Name:</strong> {{ name }}</p>
+            <p><strong>Expected Returns (₹):</strong> {{ expected_return }}</p>
+            <p><strong>Profit/Loss Percentage:</strong> {{ profit_loss }}%</p>
+            <p><strong>Tax Payable (₹):</strong> {{ tax_payable }}</p>
+            <p><strong>Model Accuracy:</strong> {{ accuracy }}%</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
